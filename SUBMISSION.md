@@ -4,7 +4,7 @@
 - Repository, final commit: https://github.com/dendybug/decentrathon-2026/commit/<FINAL_SHA>
 - Public Kaggle notebook, the saved version (`COMMIT` in it = the sha above; the same link is in
   the README):
-  https://www.kaggle.com/code/<you>/<notebook>?scriptVersionId=<VERSION>
+  https://www.kaggle.com/code/askhatlishev/notebooka4d91d51f1
 - Demo video (up to 3 minutes): <VIDEO_LINK>
 - Presentation: <PRESENTATION_LINK>
 
@@ -29,9 +29,10 @@ Ideas taken from other kernels, with links (we wrote the code ourselves):
 ## Results on Kaggle T4 (from `runs/result.json` and `runs/checks.json` of the notebook above)
 | | Base Soup | Ours | Ratio |
 |---|---|---|---|
-| Time of `soup train`, s | 76.25 | 72.49 | speedup x1.052 |
+| Time of `soup train`, s | 86.1 | 75.6 | speedup x1.138 |
 | Peak GPU memory, MiB | 14,345 | 8,383 | base/ours x1.711 |
-| Eval loss (public rows) | 2.04966 | 2.04965 | -0.0 % |
+| Eval loss (public rows) | 2.04963 | 2.04965 | +0.001% |
+
 
 (These numbers are from a Tesla T4 on Colab; replace them with the Kaggle run if they differ.)
 
