@@ -17,11 +17,13 @@
 ## Our kernels
 
 
-| | Base Soup | Ours | Ratio |
-|---|---|---|---|
-| Time of `soup train`, s | 89.7 | 75.6 | speedup x1.186 |
-| Peak GPU memory, MiB | 14,345 | 8,383 | base/ours x1.711 |
-| Eval loss (public rows) | 2.04963 | 2.04964 | +0.000% |
+| Kernel | File | Training time |
+|---|---|---|
+| head_loss_rows_kernel | solution/head_loss.py | — |
+| rmsnorm_fwd_kernel, rmsnorm_bwd_kernel | solution/rmsnorm.py | — |
+| nf4_dequant_kernel | solution/nf4_dequant.py | — |
+| **All own kernels** | | **PASS (>=5%)** |
+
 
 
 
@@ -32,11 +34,13 @@ Ideas taken from other kernels, with links (we wrote the code ourselves):
 - NF4 layout: bitsandbytes 0.50.2, https://github.com/bitsandbytes-foundation/bitsandbytes
 
 ## Results on Kaggle T4 (from `runs/result.json` and `runs/checks.json` of the notebook above)
+
 | | Base Soup | Ours | Ratio |
 |---|---|---|---|
-| Time of `soup train`, s | 86.1 | 75.6 | speedup x1.138 |
+| Time of `soup train`, s | 89.7 | 75.6 | speedup x1.186 |
 | Peak GPU memory, MiB | 14,345 | 8,383 | base/ours x1.711 |
-| Eval loss (public rows) | 2.04963 | 2.04965 | +0.001% |
+| Eval loss (public rows) | 2.04963 | 2.04964 | +0.000% |
+
 
 
 
