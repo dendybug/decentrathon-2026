@@ -5,7 +5,7 @@ Public Kaggle notebook (saved version): https://www.kaggle.com/code/askhatlishev
 
 **По-русски, коротко.** Мы ускорили и облегчили `soup train` (Qwen2.5-1.5B-Instruct, 4-bit NF4,
 LoRA r=16) тремя собственными Triton-ядрами в папке `solution/`. Память на T4: 14 345 → 8 383 MiB
-(в 1,71 раза меньше), время: ×1,138, качество не изменилось (eval loss 2,04966 → 2,04965).
+(в 1,71 раза меньше), время: ×1,186, качество не изменилось (eval loss 2,04963 → 2,04964).
 Все 10 проверок `harness/check_rules.py` проходят. Как запустить: см. раздел «How to run».
 
 ## What we did
@@ -73,7 +73,7 @@ mean gap 0.01 % (check 6); Soup's 79 regression tests pass with the patches (che
 
 ## Limits
 
-- The speed gain is small (about 12 %): matrix multiplications and attention are untouched, and the
+- The speed gain is small (about 16 %): matrix multiplications and attention are untouched, and the
   chunked head trades a few extra launches for memory. Run-to-run noise of the base is about +-3 s.
 - One run per side on the public rows; the jury uses hidden rows, another seed and two runs per side.
 - The patches assume Qwen2 with a frozen, tied head; anything else (trainable head, soft-capped
