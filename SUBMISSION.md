@@ -1,4 +1,4 @@
-# Submission: <TEAM NAME>
+# Submission: A.I.F.R-Company
 
 ## Links
 - Repository, final commit: https://github.com/dendybug/decentrathon-2026/commit/<FINAL_SHA>
@@ -11,7 +11,8 @@
 ## Team (up to 4 people)
 | Name | Role | GitHub | Kaggle | Contact (captain) |
 |---|---|---|---|---|
-| <NAME> | <ROLE> | dendybug | <KAGGLE_USER> | <CONTACT> |
+| Алишев Асхат Талгатович | Team Captain | dendybug | askhatlishev | |
+| Абдуллин Радион | Team Member | A_I_F_R_Company | — | — |
 
 ## Our kernels
 | Kernel (`@triton.jit` name) | File | What it replaces | Share of the training time (check 4) |
