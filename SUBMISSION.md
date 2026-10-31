@@ -6,7 +6,7 @@
   the README):
   https://www.kaggle.com/code/askhatlishev/notebooka4d91d51f1
 - Demo video (up to 3 minutes): <VIDEO_LINK>
-- Presentation: <PRESENTATION_LINK>
+- Presentation: https://docs.google.com/presentation/d/1D2OR5Uu4BKwNA6grrOYWODL-uv0yYpJd/edit?usp=sharing&ouid=115017380854967258274&rtpof=true&sd=true
 
 ## Team (up to 4 people)
 | Name | Role | GitHub | Kaggle | Contact (captain) |
