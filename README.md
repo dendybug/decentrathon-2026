@@ -1,7 +1,7 @@
 # Soup Kernel Challenge: chunked head loss, fused RMSNorm and NF4 dequantization in Triton
 
 Decentrathon 6.0, track "AI Engineering by Soup", task "Soup Kernel Challenge".
-Public Kaggle notebook (saved version): https://www.kaggle.com/code/askhatlishev/notebooka4d91d51f1
+Public Kaggle notebook (saved version): https://www.kaggle.com/code/askhatlishev/notebook3fe5abc70d
 
 **По-русски, коротко.** Мы ускорили и облегчили `soup train` (Qwen2.5-1.5B-Instruct, 4-bit NF4,
 LoRA r=16) тремя собственными Triton-ядрами в папке `solution/`. Память на T4: 14 345 → 8 383 MiB
