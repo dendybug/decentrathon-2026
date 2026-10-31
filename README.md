@@ -5,7 +5,7 @@ Public Kaggle notebook (saved version): https://www.kaggle.com/code/askhatlishev
 
 **По-русски, коротко.** Мы ускорили и облегчили `soup train` (Qwen2.5-1.5B-Instruct, 4-bit NF4,
 LoRA r=16) тремя собственными Triton-ядрами в папке `solution/`. Память на T4: 14 345 → 8 383 MiB
-(в 1,71 раза меньше), время: ×1,05, качество не изменилось (eval loss 2,04966 → 2,04965).
+(в 1,71 раза меньше), время: ×1,138, качество не изменилось (eval loss 2,04966 → 2,04965).
 Все 10 проверок `harness/check_rules.py` проходят. Как запустить: см. раздел «How to run».
 
 ## What we did
@@ -62,16 +62,17 @@ Tesla T4, one run each, from `harness/run_task.py` and `harness/check_rules.py`
 
 | | Base Soup | Ours | Ratio |
 |---|---|---|---|
-| Time of `soup train`, s | 76.25 | 72.49 | speedup x1.052 |
-| Peak GPU memory (nvidia-smi), MiB | 14,345 | 8,383 | base/ours x1.711 |
-| Eval loss, public rows | 2.04966 | 2.04965 | -0.0 % |
+| Time of `soup train`, s | 86.1 | 75.6 | speedup x1.138 |
+| Peak GPU memory, MiB | 14,345 | 8,383 | base/ours x1.711 |
+| Eval loss, public rows | 2.04963 | 2.04965 | +0.001% |
 
-All 10 checks pass: our kernels take 9.4 % of the training time (check 4); first-step loss gap 0.01 %,
+
+All 10 checks pass: our kernels take 9.1 % of the training time (check 4); first-step loss gap 0.01 %,
 mean gap 0.01 % (check 6); Soup's 79 regression tests pass with the patches (check 10).
 
 ## Limits
 
-- The speed gain is small (about 5 %): matrix multiplications and attention are untouched, and the
+- The speed gain is small (about 12 %): matrix multiplications and attention are untouched, and the
   chunked head trades a few extra launches for memory. Run-to-run noise of the base is about +-3 s.
 - One run per side on the public rows; the jury uses hidden rows, another seed and two runs per side.
 - The patches assume Qwen2 with a frozen, tied head; anything else (trainable head, soft-capped
