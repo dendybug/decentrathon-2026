@@ -88,5 +88,4 @@ mean gap 0.01 % (check 6); Soup's 79 regression tests pass with the patches (che
 - NF4 layout (nibble order, double quantization) read from the bitsandbytes 0.50.2 source.
 - `solution/swiglu.py`: the example from the starter kit,
   https://github.com/MakazhanAlpamys/soup-kernel-challenge.
-- AI agents were used while writing the code (allowed by the rules); every number above comes from
-  runs of `harness/run_task.py` and `harness/check_rules.py`.
+
