@@ -62,9 +62,10 @@ Tesla T4, one run each, from `harness/run_task.py` and `harness/check_rules.py`
 
 | | Base Soup | Ours | Ratio |
 |---|---|---|---|
-| Time of `soup train`, s | 86.1 | 75.6 | speedup x1.138 |
+| Time of `soup train`, s | 89.7 | 75.6 | speedup x1.186 |
 | Peak GPU memory, MiB | 14,345 | 8,383 | base/ours x1.711 |
-| Eval loss, public rows | 2.04963 | 2.04965 | +0.001% |
+| Eval loss, public rows | 2.04963 | 2.04964 | +0.000% |
+
 
 
 All 10 checks pass: our kernels take 9.1 % of the training time (check 4); first-step loss gap 0.01 %,
