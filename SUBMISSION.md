@@ -19,7 +19,7 @@
 | `head_loss_rows_kernel` | `solution/head_loss.py` | full logits, fp32 loss upcast, TRL entropy and accuracy passes, softmax gradient | <X> % |
 | `rmsnorm_fwd_kernel`, `rmsnorm_bwd_kernel` | `solution/rmsnorm.py` | `Qwen2RMSNorm` | <X> % |
 | `nf4_dequant_kernel` | `solution/nf4_dequant.py` | bitsandbytes NF4 dequantization, forward and backward | <X> % |
-| all together | | | 9.4 % |
+| all together | | | 9.1 % |
 
 Ideas taken from other kernels, with links (we wrote the code ourselves):
 - chunked head with TRL metrics: the idea of Soup's `stream_loss_chunk` option (#1693),
