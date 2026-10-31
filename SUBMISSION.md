@@ -1,7 +1,7 @@
 # Submission: A.I.F.R-Company
 
 ## Links
-- Repository, final commit: https://github.com/dendybug/decentrathon-2026/commit/<FINAL_SHA>
+- Repository, final commit: https://github.com/dendybug/decentrathon-2026/commit/74c039dd44350a3c3d2539e56bf8ea79bee5f63e
 - Public Kaggle notebook, the saved version (`COMMIT` in it = the sha above; the same link is in
   the README):
   https://www.kaggle.com/code/askhatlishev/notebooka4d91d51f1
